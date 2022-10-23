@@ -23,7 +23,6 @@ style={{
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '30%',
-      
        listStyle: 'none', 
     }}
     >
