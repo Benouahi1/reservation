@@ -8,6 +8,8 @@ function Live(){
 style={{
     display: 'flex',
     flexDirection: 'row',
+    color: '#ffffff',
+    backgroundColor:'#000000',
     justifyContent: 'space-around',
 }}
 > 
@@ -21,6 +23,7 @@ style={{
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '30%',
+      
        listStyle: 'none', 
     }}
     >
@@ -34,11 +37,12 @@ style={{
     style={{
         width:'8%',
         border: 'None',
-        backgroundColor: '#000000',
+        backgroundColor: '#FFBB3F',
         color: '#ffffff',
         height: '50px',
-        marginTop: '3px',
+        marginTop: '2px',
         borderRadius: '5px',
+        fontSize: '17px',
     }}
     >Login</button>
 </div>
