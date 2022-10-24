@@ -1,0 +1,66 @@
+
+
+.Home{
+    padding-bottom: 20%;
+}
+.img1{
+    width: 100%;
+    
+}
+.inscriotion{
+    width: 50%;
+    padding: 1%;
+    background-color: white;
+    display: flex;
+    position: absolute;
+    top: 58%;
+    left: 25%;
+    border-radius: 8px;
+}
+.InputRecherche{
+    border: none;
+    border-bottom: 2px solid #0d6efd;
+    border-radius: 8px;
+    color: #0d6efd;
+    text-align: center;
+    font-weight: 500;
+    padding: 2%;
+    width: 24%;
+}
+
+hr{
+    padding: 1%;
+    position: absolute;
+    width: 17%;
+    left: 27%;
+    top: 40%;
+    color: #0d6efd;
+    border-top: 2%;
+
+    
+}
+.Fin{
+    color: #084298;
+    margin-left: 7%;
+    margin-top: 2%;
+}
+.InputRecherche2{
+    border: none;
+    border-bottom: 2px solid #0d6efd;
+    border-radius: 8px;
+    color: #0d6efd;
+    text-align: center;
+    font-weight: 500;
+    padding: 2%;
+    margin-left: 8%;
+    width: 24%;
+}
+button{
+    border: none;
+    border: none;
+    margin-left: 5%;
+    width: 21%;
+    border-radius: 10px;
+    color: white;
+    background-color: #0d6efd;
+}

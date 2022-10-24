@@ -8,7 +8,7 @@ import React from 'react';
 
 <footer
         style={{
-          backgroundColor: 'black',
+          backgroundColor: 'rgb(30 46 100)',
           width: '100%',
           height: '70px',
           display: 'flex',
@@ -16,10 +16,16 @@ import React from 'react';
           textAlign: 'center',
           alignItems: 'center',
           style: 'none',
+          paddingTop: '15px',
         }}
         >
-         <p>
-            <a 
+         <p style={{
+ 
+         }}>
+            <a style={{
+                color: '#ffffff',
+                textDecoration: 'inherit',
+            }}
             href='www.Youcode.ma'
             >
                     Youcode.ma

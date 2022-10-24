@@ -9,7 +9,7 @@ style={{
     display: 'flex',
     flexDirection: 'row',
     color: '#ffffff',
-    backgroundColor:'#000000',
+    backgroundColor:'rgb(30 46 100)',
     justifyContent: 'space-around',
 }}
 > 
@@ -23,25 +23,28 @@ style={{
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '30%',
-       listStyle: 'none', 
+       listStyle: 'none',
+       marginTop: '10px', 
     }}
     >
 
-    <li><a>Home</a></li>
-    <li><a>Reserver</a></li>
-    <li><a>Car</a></li>
-    <li><a>Profil</a></li>
+    <li><i>Home</i></li>
+    <li><i>Reserver</i></li>
+    <li><i>Car</i></li>
+    <li><i>Profil</i></li>
     </ul>
     <button
     style={{
-        width:'8%',
+        width:'10%',
         border: 'None',
-        backgroundColor: '#FFBB3F',
+        backgroundColor: 'rgb(0 57 255)',
         color: '#ffffff',
         height: '50px',
         marginTop: '2px',
         borderRadius: '5px',
         fontSize: '17px',
+        fontWeight: '500',
+        
     }}
     >Login</button>
 </div>
