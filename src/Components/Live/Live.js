@@ -9,7 +9,7 @@ style={{
     display: 'flex',
     flexDirection: 'row',
     color: '#ffffff',
-    backgroundColor:'rgb(30 46 100)',
+    backgroundColor:'#344fa1',
     justifyContent: 'space-around',
 }}
 > 
@@ -31,13 +31,13 @@ style={{
     <li><i>Home</i></li>
     <li><i>Reserver</i></li>
     <li><i>Car</i></li>
-    <li><i>Profil</i></li>
+    <li><i>Voyages</i></li>
     </ul>
     <button
     style={{
         width:'10%',
         border: 'None',
-        backgroundColor: 'rgb(0 57 255)',
+        backgroundColor: '#007bff',
         color: '#ffffff',
         height: '50px',
         marginTop: '2px',
