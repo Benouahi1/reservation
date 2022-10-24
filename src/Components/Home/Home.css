@@ -88,11 +88,40 @@ button{
 .InfoVoyages{
     margin-top: 1%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 .Card{
     border-radius: 8px;
-    border: 1px solid #5c6169;
+    
+    position: relative;
     width: 20%;
+    padding-bottom: 1%;
+    box-shadow: 3px 3px  #63606040;
+    background-color: #ececec;
 
+
+}
+.img2{
+    position: relative;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.info{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+
+}
+.slach{
+    width: 12%;
+    position: absolute;
+    left: 46%;
+}
+
+.Ville{
+    margin-top: 2%;
+    font-weight: 500;
+    color: #084298;
 }
