@@ -125,3 +125,24 @@ button{
     font-weight: 500;
     color: #084298;
 }
+.Titre{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: #084298;
+    margin-top: 2%;
+    text-decoration: underline;
+}
+
+.img3{
+    width: 35%;
+    margin-left: 29%;
+    
+}
+.ParG{
+    text-align: center;
+    font-family: inherit;
+    font-weight: 400;
+    color: #084298;
+
+}

@@ -26,7 +26,7 @@ import React from 'react';
                 color: '#ffffff',
                 textDecoration: 'inherit',
             }}
-            href='www.Youcode.ma'
+            href='https://www.Youcode.ma'
             >
                     Youcode.ma
             </a>

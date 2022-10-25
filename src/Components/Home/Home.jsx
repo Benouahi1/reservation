@@ -3,6 +3,10 @@ import './Home.css';
 import Img1 from "../../images/juan-encalada-6mcVaoGNz1w-unsplash.jpg";
 import Img2 from "../../images/jonathan-borba-T5jzpRTVF1U-unsplash.jpg";
 import bus from "../../images/right-arrow-removebg-preview.png";
+import dollar from "../../images/dollar-removebg-preview.png";
+import Banc1 from "../../images/download (1).png";
+import Banc2 from "../../images/download-removebg-preview (1) - Copy.png";
+import Banc3 from "../../images/debit-card-removebg-preview - Copy.png";
 
 
 function Home(){
@@ -24,6 +28,7 @@ function Home(){
                         <button>Rechirche</button>
                     </div>
                 </div>
+                <p className="Titre">Voyages</p>
                 <div className="InfoVoyages">
                     <div className="Card ">
                     <img className="img2" src={Img2}></img>
@@ -89,7 +94,23 @@ function Home(){
 
                 <div>
                     <div>
-                        <p className="About">About</p>
+                        <p className="Titre">About</p>
+                        <div className="InfoVoyages">
+                            <div className="Card ">
+                                <img className="img3" src={dollar}></img>
+                                <div className="info">
+                                    <p className="ParG">Sur notre site, nous vous garantissons de traiter avec des comptes bancaires ou de payer via les agences suivantes</p>
+                                </div>
+                                <div className="info">
+                                <img className="img3" src={Banc1}></img>
+                                <img className="img3" src={Banc2}></img>
+                                <img className="img3" src={Banc3}></img>
+                                </div>
+                                <div className="info">
+                                         <p className="Ville">Hours : 11:00 AM</p>
+                                </div>
+                            </div>
+                         </div>
                     </div>
                 </div>
             </div>
