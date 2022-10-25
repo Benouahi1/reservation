@@ -8,7 +8,7 @@ import React from 'react';
 
 <footer
         style={{
-          backgroundColor: 'rgb(30 46 100)',
+          backgroundColor: '#344fa1',
           width: '100%',
           height: '70px',
           display: 'flex',

@@ -5,6 +5,7 @@ import Img2 from "../../images/jonathan-borba-T5jzpRTVF1U-unsplash.jpg";
 import bus from "../../images/right-arrow-removebg-preview.png";
 import dollar from "../../images/dollar-removebg-preview.png";
 import dollar2 from "../../images/security-removebg-preview.png";
+import dollar3 from "../../images/placeholder-removebg-preview.png";
 import Banc1 from "../../images/download (1).png";
 import Banc2 from "../../images/download-removebg-preview (1) - Copy.png";
 import Banc3 from "../../images/debit-card-removebg-preview - Copy.png";
@@ -18,7 +19,7 @@ function Home(){
                        
                     </img>
                     <div className="inscriotion">
-                        <p className="Paragraph">début</p>
+                        <p className="Paragraph">Début</p>
                         <input className="InputRecherche" ></input>
 
                         <p className="Fin">Voyages</p>
@@ -95,9 +96,9 @@ function Home(){
 
                 <div>
                     <div>
-                        <p className="Titre">About</p>
+                        <p className="Titre">Avantages</p>
                         <div className="InfoVoyages">
-                            <div className="Card ">
+                            <div className="Card1 ">
                                 <img className="img3" src={dollar}></img>
                                 <div className="info">
                                     <p className="ParG">Sur notre site, nous vous garantissons de traiter avec des comptes bancaires ou de payer via les agences suivantes :</p>
@@ -111,15 +112,25 @@ function Home(){
                                          
                                 </div>
                             </div>
-                            <div className="Card ">
+                            <div className="Card1 ">
                                 <img className="img3" src={dollar2}></img>
                                 <div className="info">
                                     <p className="ParG">Nous garantissons votre argent, un voyage agréable à partir d'ici et votre confort</p>
                                 </div>
                                 <div className="info">
-                                <img className="img4" src={Banc1}></img>
-                                <img className="img4" src={Banc2}></img>
-                                <img className="img4" src={Banc3}></img>
+                               
+                                </div>
+                                <div className="info">
+                                         
+                                </div>
+                            </div>
+                            <div className="Card1 ">
+                                <img className="img3" src={dollar3}></img>
+                                <div className="info">
+                                    <p className="ParG">Notre agence est située dans la ville de Safi. Vous pouvez voyager de partout dans le royaume</p>
+                                </div>
+                                <div className="info">
+                                
                                 </div>
                                 <div className="info">
                                          

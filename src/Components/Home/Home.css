@@ -149,5 +149,13 @@ button{
     font-family: inherit;
     font-weight: 400;
     color: #084298;
+    margin-top: 6%;
 
+}
+.Card1{
+    
+    
+    position: relative;
+    width: 20%;
+    padding-bottom: 1%;
 }
