@@ -97,7 +97,7 @@ button{
     position: relative;
     width: 20%;
     padding-bottom: 1%;
-    box-shadow: 3px 3px  #63606040;
+    box-shadow: 10px 10px 16px #63606096;
     background-color: #ececec;
 
 
@@ -137,6 +137,11 @@ button{
 .img3{
     width: 35%;
     margin-left: 29%;
+    
+}
+.img4{
+    width: 23%;
+    margin-left: 2%;
     
 }
 .ParG{
