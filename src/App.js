@@ -1,5 +1,4 @@
 import {Component} from 'react';
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Reserver from './Components/Reservation/Resevation';
@@ -12,10 +11,7 @@ class App extends Component {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-         
-          <Route path="/Reserve" element={<Reserver />} ></Route>
-          
-        
+        <Route path="/Reserve" element={<Reserver />} ></Route>
       </Routes>
     </BrowserRouter>
     );
