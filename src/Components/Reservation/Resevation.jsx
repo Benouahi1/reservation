@@ -33,6 +33,91 @@ function Reserver(){
                             </div>
 
                         </div>
+                        <div className="Card">
+                            <img className="img2" src={Img2} alt="" />
+                            <div className="info">
+                                <p>Apart:  Rabat</p>
+                                <p>Avant:  Tanger</p>
+                            </div>
+                            <div className="info">
+                                <p>Prix: 220 DH</p>
+                                <p>Date: 22/11/2022</p>
+                            </div>
+                            <div className="info">
+                                <p>Hours: 22:00</p>
+                                <button className="but">Reserver</button>
+                            </div>
+
+                        </div>
+                        <div className="Card">
+                            <img className="img2" src={Img2} alt="" />
+                            <div className="info">
+                                <p>Apart:  Rabat</p>
+                                <p>Avant:  Tanger</p>
+                            </div>
+                            <div className="info">
+                                <p>Prix: 220 DH</p>
+                                <p>Date: 22/11/2022</p>
+                            </div>
+                            <div className="info">
+                                <p>Hours: 22:00</p>
+                                <button className="but">Reserver</button>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <div className="MonCard">
+                     
+                        <div className="Card">
+                            <img className="img2" src={Img2} alt="" />
+                            <div className="info">
+                                <p>Apart:  Rabat</p>
+                                <p>Avant:  Tanger</p>
+                            </div>
+                            <div className="info">
+                                <p>Prix: 220 DH</p>
+                                <p>Date: 22/11/2022</p>
+                            </div>
+                            <div className="info">
+                                <p>Hours: 22:00</p>
+                                <button className="but">Reserver</button>
+                            </div>
+
+                        </div>
+                        <div className="Card">
+                            <img className="img2" src={Img2} alt="" />
+                            <div className="info">
+                                <p>Apart:  Rabat</p>
+                                <p>Avant:  Tanger</p>
+                            </div>
+                            <div className="info">
+                                <p>Prix: 220 DH</p>
+                                <p>Date: 22/11/2022</p>
+                            </div>
+                            <div className="info">
+                                <p>Hours: 22:00</p>
+                                <button className="but">Reserver</button>
+                            </div>
+
+                        </div>
+                        <div className="Card">
+                            <img className="img2" src={Img2} alt="" />
+                            <div className="info">
+                                <p>Apart:  Rabat</p>
+                                <p>Avant:  Tanger</p>
+                            </div>
+                            <div className="info">
+                                <p>Prix: 220 DH</p>
+                                <p>Date: 22/11/2022</p>
+                            </div>
+                            <div className="info">
+                                <p>Hours: 22:00</p>
+                                <button className="but">Reserver</button>
+                            </div>
+
+                        </div>
+                        
                     </div>
                 </div>
             </div>
