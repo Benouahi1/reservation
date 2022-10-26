@@ -98,7 +98,7 @@ function Home(){
                     <div>
                         <p className="Titre">Avantages</p>
                         <div className="InfoVoyages">
-                            <div className="Card1 ">
+                            <div className="Card2 ">
                                 <img className="img3" src={dollar}></img>
                                 <div className="info">
                                     <p className="ParG">Sur notre site, nous vous garantissons de traiter avec des comptes bancaires ou de payer via les agences suivantes :</p>
@@ -112,7 +112,7 @@ function Home(){
                                          
                                 </div>
                             </div>
-                            <div className="Card1 ">
+                            <div className="Card2 ">
                                 <img className="img3" src={dollar2}></img>
                                 <div className="info">
                                     <p className="ParG">Nous garantissons votre argent, un voyage agréable à partir d'ici et votre confort</p>
@@ -124,7 +124,7 @@ function Home(){
                                          
                                 </div>
                             </div>
-                            <div className="Card1 ">
+                            <div className="Card2 ">
                                 <img className="img3" src={dollar3}></img>
                                 <div className="info">
                                     <p className="ParG">Notre agence est située dans la ville de Safi. Vous pouvez voyager de partout dans le royaume</p>

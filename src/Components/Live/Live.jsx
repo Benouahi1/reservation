@@ -1,4 +1,5 @@
 import React from "react";
+import './Live.css'
 
 
 
@@ -23,16 +24,21 @@ style={{
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '30%',
+        color: 'white',
        listStyle: 'none',
        marginTop: '10px', 
+       textDecoration: 'none',
     }}
     >
-
-    <li><i>Home</i></li>
-    <li><i>Reserver</i></li>
+    <li> <a
+    style={{
+       
+    }} href="/">Home</a></li>
+    <li><a href="/Reserve">Reserve</a></li>
     <li><i>Car</i></li>
     <li><i>Voyages</i></li>
     </ul>
+    
     <button
     style={{
         width:'10%',
@@ -46,7 +52,9 @@ style={{
         fontWeight: '500',
         
     }}
+
     >Login</button>
+     
 </div>
     );
 }

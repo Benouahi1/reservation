@@ -8,7 +8,7 @@ function Reserver(){
     return(
             <div>
                 <div>
-                    <img className="img1" src={Reserve} alt="" />
+                    <img className="imge1" src={Reserve} alt="" />
                     <div  className="Reserve">
                       <p>Reserver</p>
                     </div>
@@ -17,7 +17,7 @@ function Reserver(){
                 <div className="Afichages">
                     <div className="MonCard">
                      
-                        <div className="Card">
+                        <div className="Card1">
                             <img className="img2" src={Img2} alt="" />
                             <div className="info">
                                 <p>Apart:  Rabat</p>
@@ -33,7 +33,7 @@ function Reserver(){
                             </div>
 
                         </div>
-                        <div className="Card">
+                        <div className="Card1">
                             <img className="img2" src={Img2} alt="" />
                             <div className="info">
                                 <p>Apart:  Rabat</p>
@@ -49,7 +49,7 @@ function Reserver(){
                             </div>
 
                         </div>
-                        <div className="Card">
+                        <div className="Card1">
                             <img className="img2" src={Img2} alt="" />
                             <div className="info">
                                 <p>Apart:  Rabat</p>
@@ -69,7 +69,7 @@ function Reserver(){
                     </div>
                     <div className="MonCard">
                      
-                        <div className="Card">
+                        <div className="Card1">
                             <img className="img2" src={Img2} alt="" />
                             <div className="info">
                                 <p>Apart:  Rabat</p>
@@ -85,7 +85,7 @@ function Reserver(){
                             </div>
 
                         </div>
-                        <div className="Card">
+                        <div className="Card1">
                             <img className="img2" src={Img2} alt="" />
                             <div className="info">
                                 <p>Apart:  Rabat</p>
@@ -101,7 +101,7 @@ function Reserver(){
                             </div>
 
                         </div>
-                        <div className="Card">
+                        <div className="Card1">
                             <img className="img2" src={Img2} alt="" />
                             <div className="info">
                                 <p>Apart:  Rabat</p>
@@ -118,6 +118,9 @@ function Reserver(){
 
                         </div>
                         
+                    </div>
+                    <div>
+
                     </div>
                 </div>
             </div>

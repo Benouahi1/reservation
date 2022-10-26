@@ -1,4 +1,4 @@
-.img1{
+.imge1{
     width: 100%;
     position: fixed;
     z-index: -1;
@@ -38,7 +38,7 @@
 
     justify-content: space-around;
 }
-.Card{
+.Card1{
     width: 25%;
     border-radius: 8px;
     padding-bottom: 1%;
