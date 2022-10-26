@@ -11,7 +11,7 @@ class App extends Component {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/Reserve" element={<Reserver />} ></Route>
+        <Route path="/Reserve" element={<Reserver />}></Route>
       </Routes>
     </BrowserRouter>
     );
