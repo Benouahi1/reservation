@@ -2,3 +2,9 @@ a{
     text-decoration: none;
     color: white;
 }
+.NAv{
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    z-index: 99;
+}

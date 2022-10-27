@@ -6,12 +6,14 @@ import './Live.css'
 function Live(){
     return(
 <div
+className="NAv"
 style={{
     display: 'flex',
     flexDirection: 'row',
     color: '#ffffff',
     backgroundColor:'#344fa1',
     justifyContent: 'space-around',
+    
 }}
 > 
     <h1>
