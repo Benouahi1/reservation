@@ -26,11 +26,17 @@
 
 .Conect{
     width: 60%;
-    margin-left: 17%;
+    margin-left: 20%;
     margin-top: 7%;
 }
 input{
     background-color: #00000000;
     border: none;
     border-bottom: 1px solid #ffffff;
+}
+.Cree{
+    font-size: 16px;
+   
+    color: #007bff;
+    width: 34%;
 }
