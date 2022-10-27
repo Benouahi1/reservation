@@ -15,7 +15,7 @@ function Login(){
                 <input type="text" />
                 <p className="p">Password</p>
                 <input type="Password" />
-                <a className="Cree" href="">Cree un Compte</a>
+                <a className="Cree" href="/Rougister">Cree un Compte</a>
                 <button className="Conect">Connecte</button>
             </div>
             

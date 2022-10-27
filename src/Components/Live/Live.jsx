@@ -37,25 +37,25 @@ style={{
        
     }} href="/">Home</a></li>
     <li><a href="/Reserve">Reserve</a></li>
-    <li><i>Car</i></li>
-    <li><i>Voyages</i></li>
+  
     </ul>
-    
-    <button
-    style={{
-        width:'10%',
+    <a href="/Login" 
+     style={{
+        padding: '1%',
+        width: '7%',
+        textAlign: 'center',
         border: 'None',
         backgroundColor: '#007bff',
         color: '#ffffff',
-        height: '50px',
-        marginTop: '2px',
+       
         borderRadius: '5px',
         fontSize: '17px',
         fontWeight: '500',
         
     }}
 
-    >Login</button>
+> 
+    Login</a>
      
 </div>
     );
