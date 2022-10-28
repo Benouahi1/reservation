@@ -11,7 +11,7 @@ function Login(){
         <div className="Login">
             <img className="BackgroundImages" src={img4} alt="" />
             <div className="Log">
-            <p className="p">Cree Un Compte</p>
+            <p className="p1">Cree Un Compte</p>
             <p className="p">USerName</p>
                 <input type="text" />
                 <p className="p">Gmail</p>

@@ -11,6 +11,7 @@ function Login(){
         <div className="Login">
             <img className="BackgroundImages" src={img4} alt="" />
             <div className="Log">
+            <p className="p1">Login</p>
                 <p className="p">Gmail</p>
                 <input type="text" />
                 <p className="p">Password</p>

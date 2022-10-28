@@ -4,7 +4,7 @@
     top: 19%;
     width: 35%;
     left: 33%;
-    padding: 5%;
+    padding: 3%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -23,6 +23,14 @@
     margin-top: 1%;
 
 }
+.p1{
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 1%;
+
+}
+
 
 .Conect{
     width: 60%;
