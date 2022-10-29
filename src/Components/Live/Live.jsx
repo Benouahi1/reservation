@@ -40,19 +40,7 @@ style={{
   
     </ul>
     <a href="/Login" 
-     style={{
-        padding: '1%',
-        width: '7%',
-        textAlign: 'center',
-        border: 'None',
-        backgroundColor: '#007bff',
-        color: '#ffffff',
-       
-        borderRadius: '5px',
-        fontSize: '17px',
-        fontWeight: '500',
-        
-    }}
+    className="Boton"
 
 > 
     Login</a>
