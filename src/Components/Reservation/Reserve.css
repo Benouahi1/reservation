@@ -28,8 +28,9 @@
     padding-top: 3%;
     padding-bottom: 3%;
     margin-bottom: 3%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 10px;
+   
 }
 .MonCard{
     display: flex;
@@ -39,21 +40,25 @@
     justify-content: space-around;
 }
 .Card1{
-    width: 25%;
+    width: 68%;
+    margin-left: 14%;
     border-radius: 8px;
-    padding-bottom: 1%;
+    display: flex;
+    padding-right: 5%;
     box-shadow: 1px 1px 15px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .img2{
     
-    width: 100%;
+    width:20%;
     border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
 
 }
 .info{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     color: rgb(52 79 161);
     font-weight: 500;
@@ -64,5 +69,5 @@
     border: none;
     background-color: #0d6efd;
     border-radius: 4px;
-    width: 30%;
+    width: 87%;
 }

@@ -2,129 +2,80 @@ import React from "react";
 import './Reserve.css';
 import Reserve from "../../images/Reserve.jpg";
 import Img2 from "../../images/jonathan-borba-T5jzpRTVF1U-unsplash.jpg";
+import {useState, useEffect } from "react";
 
 
 function Reserver(){
-    return(
+
+const [Data ,setData]= useState();
+
+useEffect(()=> {
+    fetch('http://localhost:5000/Voyages', 
+        {
+            method:"GET", 
+            headers: {
+                'Access-Control-Allow-Origin':'*',
+                'Content-type': 'application/json; charset=UTF-8'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            setData(data);
+
+        });
+    }, [])
+
+// const getVoyages = async () =>{
+//     const response = await axios.get("https://localhost:5000/Voyages");
+//     if(response.status === 200){
+//         setData(response.data);
+//     }
+
+// };
+
+if(typeof Data === "object"){
+return(
+        <div>
             <div>
-                <div>
-                    <img className="imge1" src={Reserve} alt="" />
-                    <div  className="Reserve">
-                      <p>Reserver</p>
-                    </div>
-                    
+                <img className="imge1" src={Reserve} alt="" />
+                <div  className="Reserve">
+                  <p>Reserver</p>
                 </div>
-                <div className="Afichages">
-                    <div className="MonCard">
-                     
-                        <div className="Card1">
-                            <img className="img2" src={Img2} alt="" />
-                            <div className="info">
-                                <p>Apart:  Rabat</p>
-                                <p>Avant:  Tanger</p>
-                            </div>
-                            <div className="info">
-                                <p>Prix: 220 DH</p>
-                                <p>Date: 22/11/2022</p>
-                            </div>
-                            <div className="info">
-                                <p>Hours: 22:00</p>
-                                <button className="but">Reserver</button>
-                            </div>
-
-                        </div>
-                        <div className="Card1">
-                            <img className="img2" src={Img2} alt="" />
-                            <div className="info">
-                                <p>Apart:  Rabat</p>
-                                <p>Avant:  Tanger</p>
-                            </div>
-                            <div className="info">
-                                <p>Prix: 220 DH</p>
-                                <p>Date: 22/11/2022</p>
-                            </div>
-                            <div className="info">
-                                <p>Hours: 22:00</p>
-                                <button className="but">Reserver</button>
-                            </div>
-
-                        </div>
-                        <div className="Card1">
-                            <img className="img2" src={Img2} alt="" />
-                            <div className="info">
-                                <p>Apart:  Rabat</p>
-                                <p>Avant:  Tanger</p>
-                            </div>
-                            <div className="info">
-                                <p>Prix: 220 DH</p>
-                                <p>Date: 22/11/2022</p>
-                            </div>
-                            <div className="info">
-                                <p>Hours: 22:00</p>
-                                <button className="but">Reserver</button>
-                            </div>
-
-                        </div>
-                        
-                    </div>
-                    <div className="MonCard">
-                     
-                        <div className="Card1">
-                            <img className="img2" src={Img2} alt="" />
-                            <div className="info">
-                                <p>Apart:  Rabat</p>
-                                <p>Avant:  Tanger</p>
-                            </div>
-                            <div className="info">
-                                <p>Prix: 220 DH</p>
-                                <p>Date: 22/11/2022</p>
-                            </div>
-                            <div className="info">
-                                <p>Hours: 22:00</p>
-                                <button className="but">Reserver</button>
-                            </div>
-
-                        </div>
-                        <div className="Card1">
-                            <img className="img2" src={Img2} alt="" />
-                            <div className="info">
-                                <p>Apart:  Rabat</p>
-                                <p>Avant:  Tanger</p>
-                            </div>
-                            <div className="info">
-                                <p>Prix: 220 DH</p>
-                                <p>Date: 22/11/2022</p>
-                            </div>
-                            <div className="info">
-                                <p>Hours: 22:00</p>
-                                <button className="but">Reserver</button>
-                            </div>
-
-                        </div>
-                        <div className="Card1">
-                            <img className="img2" src={Img2} alt="" />
-                            <div className="info">
-                                <p>Apart:  Rabat</p>
-                                <p>Avant:  Tanger</p>
-                            </div>
-                            <div className="info">
-                                <p>Prix: 220 DH</p>
-                                <p>Date: 22/11/2022</p>
-                            </div>
-                            <div className="info">
-                                <p>Hours: 22:00</p>
-                                <button className="but">Reserver</button>
-                            </div>
-
-                        </div>
-                        
-                    </div>
-                    <div>
-
-                    </div>
-                </div>
+                
             </div>
-    );
+            <div className="Afichages">
+             {
+                Data.map((item, index) => (
+                    <div className="Card1">
+                        <img className="img2" src={Img2} alt="" />
+                        <div className="info">
+                            <p>Apart:  {item.Circulation[0]}</p>
+                            <p>Circulation:  {item.Circulation[1]}</p>
+                            <p>Avant:  {item.Circulation[2]}</p>
+                        </div>
+                        <div className="info">
+                            <p>Date: {item.Date_depart}</p>
+                            <p></p>
+                            <p>Prix: {item.Prix[2]} Dh</p>
+                        </div>
+                        <div className="info">
+                            <p>Hours depart: {item.Hours_Circulation[1]}</p>
+                            <p>Hours Circulation: {item.Hours_Circulation[1]}</p>
+                            <button className="but">Reserver</button>
+                        </div>
+                
+                </div>
+                ))
+            }
+            </div>
+        </div>
+    
+);
+
+
+
+}
 }
 
 export default Reserver;

@@ -33,62 +33,62 @@ function Home(){
                 <p className="Titre">Voyages</p>
                 <div className="InfoVoyages">
                     <div className="Card ">
-                    <img className="img2" src={Img2}></img>
-                        <div className="info">
+                    <img className="img5" src={Img2}></img>
+                        <div className="info1">
                             <p className="Ville">Rabat</p>
                             <img className="slach" src={bus}></img>
                             <p className="Ville">Fes</p>
                         </div>
-                        <div className="info">
+                        <div className="info1">
                             <p className="Ville">Prix :200 DH</p>
                             <p className="Ville">Date :29/10/2022</p>
                         </div>
-                        <div className="info">
+                        <div className="info1">
                             <p className="Ville">Hours : 11:00 AM</p>
                         </div>
                     </div>
                     <div className="Card">
-                    <img className="img2" src={Img2}></img>
-                        <div className="info">
+                    <img className="img5" src={Img2}></img>
+                        <div className="info1">
                             <p className="Ville">Khemisset</p>
                             <img className="slach" src={bus}></img>
                             <p className="Ville">Tanger</p>
                         </div>
-                        <div className="info">
+                        <div className="info1">
                             <p className="Ville">Prix :300 DH</p>
                             <p className="Ville">Date :31/10/2022</p>
                         </div>
-                        <div className="info">
+                        <div className="info1">
                             <p className="Ville">Hours : 10:00 AM</p>
                         </div>
                     </div>
                     <div className="Card">
-                    <img className="img2" src={Img2}></img>
-                        <div className="info">
+                    <img className="img5" src={Img2}></img>
+                        <div className="info1">
                             <p className="Ville">Meknes</p>
                             <img className="slach" src={bus}></img>
                             <p className="Ville">Safi</p>
                         </div>
-                        <div className="info">
+                        <div className="info1">
                             <p className="Ville">Prix :200 DH</p>
                             <p className="Ville">Date :29/10/2022</p>
                         </div>
-                        <div className="info">
+                        <div className="info1">
                             <p className="Ville">Hours : 8:00 AM</p>
                         </div>
                     </div>
                     <div className="Card">
-                    <img className="img2" src={Img2}></img>
-                        <div className="info">
+                    <img className="img5" src={Img2}></img>
+                        <div className="info1">
                             <p className="Ville">Tanger</p>
                             <img className="slach" src={bus}></img>
                             <p className="Ville">Safi</p>
                         </div>
-                        <div className="info">
+                        <div className="info1">
                             <p className="Ville">Prix :300 DH</p>
                             <p className="Ville">Date :24/10/2022</p>
                         </div>
-                        <div className="info">
+                        <div className="info1">
                             <p className="Ville">Hours : 02:00 AM</p>
                         </div>
                     </div>
@@ -103,36 +103,36 @@ function Home(){
                                 <div className="info">
                                     <p className="ParG">Sur notre site, nous vous garantissons de traiter avec des comptes bancaires ou de payer via les agences suivantes :</p>
                                 </div>
-                                <div className="info">
+                                <div className="info1">
                                 <img className="img4" src={Banc1}></img>
                                 <img className="img4" src={Banc2}></img>
                                 <img className="img4" src={Banc3}></img>
                                 </div>
-                                <div className="info">
+                                <div className="info1">
                                          
                                 </div>
                             </div>
                             <div className="Card2 ">
                                 <img className="img3" src={dollar2}></img>
-                                <div className="info">
+                                <div className="info1">
                                     <p className="ParG">Nous garantissons votre argent, un voyage agréable à partir d'ici et votre confort</p>
                                 </div>
-                                <div className="info">
+                                <div className="info1">
                                
                                 </div>
-                                <div className="info">
+                                <div className="info1">
                                          
                                 </div>
                             </div>
                             <div className="Card2 ">
                                 <img className="img3" src={dollar3}></img>
-                                <div className="info">
+                                <div className="info1">
                                     <p className="ParG">Notre agence est située dans la ville de Safi. Vous pouvez voyager de partout dans le royaume</p>
                                 </div>
-                                <div className="info">
+                                <div className="info1">
                                 
                                 </div>
-                                <div className="info">
+                                <div className="info1">
                                          
                                 </div>
                             </div>

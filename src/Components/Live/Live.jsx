@@ -23,7 +23,7 @@ style={{
     <ul style={{
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         width: '30%',
         color: 'white',
@@ -32,13 +32,18 @@ style={{
        textDecoration: 'none',
     }}
     >
-    <li> <a
+    <li 
+    style={{
+        marginleft: '10px',
+    }}
+    > <a
     style={{
        
     }} href="/">Home</a></li>
     <li><a href="/Reserve">Reserve</a></li>
   
     </ul>
+   
     <a href="/Login" 
     className="Boton"
 
