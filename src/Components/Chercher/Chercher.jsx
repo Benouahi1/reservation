@@ -5,7 +5,11 @@ import {useState, useEffect } from "react";
 
 
 function Chercher(){
-
+    if(sessionStorage.getItem("username")===''){
+       
+    }else{
+        window.location.href = "/login";
+    }
     const [Data ,setData]= useState();
     useEffect(()=> {
         fetch('http://localhost:5000/Voyages/Cherche', 
@@ -43,8 +47,9 @@ function Chercher(){
                     <p> {item.Hours_Circulation[0]}h</p>
                     <p>{item.Hours_Circulation[1]}h</p>
                     <p>{item.Hours_Circulation[2]}h</p>
-                    </div>
                     
+                    </div>
+                   
                     <div className="Circulation">
                     <button>Reserver</button>
                     <p>{item.Prix[1]} DH</p>
@@ -59,7 +64,7 @@ function Chercher(){
                 }
                 
                 
-                       
+              
                     </div>
                 
             );

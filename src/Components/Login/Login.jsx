@@ -32,7 +32,10 @@ function Login(){
             }
         })
         .then(response => response.json())
-        .then(data => console.log(data));
+        .then(data => sessionStorage.setItem("username" , data[0].UserName));
+        
+        
+        console.log( sessionStorage.getItem("username"))
         reset();
         // window.location.href = "/login";
     }

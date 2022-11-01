@@ -6,6 +6,7 @@ import Login from './Components/Login/Login';
 import Rougister from './Components/Rougister/Rougister';
 import Dashbord from './Components/Dashbord/dashbord';
 import Chercher from './Components/Chercher/Chercher';
+import Logout from './Components/Logout/Lougout';
 import './App.css';
 
 
@@ -14,7 +15,8 @@ class App extends Component {
     return (
       <BrowserRouter>
       <Routes>
-      <Route path="/Chercher" element={<Chercher />}></Route>
+        <Route path="/Logout" element={<Logout />}></Route>
+        <Route path="/Chercher" element={<Chercher />}></Route>
         <Route path="/" element={<Home />}></Route>
         <Route path="/Dashbord" element={<Dashbord />}></Route>
         <Route path="/Reserve" element={<Reserver />}></Route>
