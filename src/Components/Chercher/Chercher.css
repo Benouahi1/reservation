@@ -1,0 +1,29 @@
+.Circulation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 74%;
+    margin-left: 9%;
+}
+.Afich{
+ 
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 80px 89px 80px;
+    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+     
+}
+.Car{
+    width: 90%;
+    height: 11pc;
+
+    margin-left: 14%;
+    border-radius: 8px;
+    display: flex;
+    
+    box-shadow: 1px 1px 15px;
+    flex-direction: column;
+    justify-content: space-between;
+}

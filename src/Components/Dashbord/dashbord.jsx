@@ -2,6 +2,7 @@ import React from "react";
 import './dashbord.css';
 
 import Reserve from "../../images/Reserve.jpg";
+
 // import {useState, useEffect } from "react";
 
 
@@ -86,25 +87,26 @@ function Dadshbord(){
                     </div>
                     <div className="Afichages1">
                         <div className="Menu">
-                            <ul>
+                            <ul className="ul">
                             <li className="li">Car</li>
                             <li className="li">Ajouter Car</li>
                             <li className="li">Voyages</li>
                             <li className="li">Ajouter Voyages</li>
                             <li className="li">Moudifier Voyages</li>
                             <li className="li">Utilisateur</li>
-                            <li className="li">Suprimer Utilisateur</li>
-                            
+                           
                             </ul>
+                        </div>
+                        <div>
                             
-
                         </div>
 
-                        
+                 
                     
                      </div>
                  </div>
     );
 }
 
-export default Dadshbord;
+export default Dadshbord;   
+                         

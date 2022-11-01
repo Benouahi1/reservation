@@ -1,52 +1,58 @@
 import React from "react";
-// import { useState } from "react";
+
 import './Login.css';
 import img4 from '../../images/jonathan-borba-LnggkK8864c-unsplash.jpg'
+import { useForm } from 'react-hook-form';
 
 
-// const loginUser = (Credentials) =>{
-//     const response = fetch("http://localhost:4000/User/Login", {
-//         method: 'POST',
-//         headers:{
-//             'Content-Type': 'application/json'
-//         },
-//         body: Json.stringify(Credentials)
-//     })
-//     return response.json();
-// }
+
 
 
 function Login(){
-    // const [UserName, setUserName] = useState();
-    // const [Password, setPassword] = useState();
-    // const handleLogin = (e) =>
-    //     { e.preventDefault();
-    //         const response = loginUser({
-    //             UserName,
-    //             Password
-    //         })
-    //         props.setToken(response.token);
+    const { register, handleSubmit, reset} = useForm();
+    const onSubmit = (data) => {
+        const newData = new FormData();
 
-    //     }   
+        newData.append("Gmail", data.Gmail);
+        newData.append("Password", data.Password);
+    //    console.log(data); 
+      
+        fetch('http://localhost:5000/User/Login', 
+        {
+
+            method:"POST", 
+            body:JSON.stringify({
+               
+                "Gmail" : data.Gmail,
+                "Password" : data.Password
+              }),
+            headers: {
+                'Access-Control-Allow-Origin':'*',
+                'Content-type': 'application/json; charset=UTF-8'
+            }
+        })
+        .then(response => response.json())
+        .then(data => console.log(data));
+        reset();
+        // window.location.href = "/login";
+    }
  return(
         <div className="Login">
             <img className="BackgroundImages" src={img4} alt="" />
-            <form method="post" >  
+            <form method="POST" onSubmit={handleSubmit(onSubmit)} >  
             <div className="Log">
                 <p className="p1">Login</p>
                     <p className="p">Gmail</p>
-                    <input 
-                    name="UserName"
-                     type="text" 
-                    //  onChange={e => setUserName(e.target.value)}
-                     />
+                    <input type="text"
+                     name="Gmail"
+                     {...register("Gmail")}
+                     required />
                     <p className="p">Password</p>
-                    <input name="Password"
-                     type="Password"
-                    //  onChange={e => setPassword (e.target.value)}
-                     />
+                    <input  type="Password"
+                    {...register("Password")}
+                    required/>
                     <a className="Cree" href="/Rougister">Cree un Compte</a>
-                    <button type="submit" className="Conect">Connecte</button>
+                    <button type="submit" value="Add" className="Conect">Connecte</button>
             </div>
             </form>
           
