@@ -108,7 +108,7 @@ button{
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
-.info1{
+.info3{
  display: flex;
  flex-direction: row;
  justify-content: space-evenly;

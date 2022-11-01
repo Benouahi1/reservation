@@ -55,7 +55,7 @@ return(
                             <p>Avant:  {item.Circulation[2]}</p>
                         </div>
                         <div className="info">
-                            <p>Date: {item.Date_depart}</p>
+                            <p>Date: {item.Date_depart.toString().split("T")[0]}</p>
                             <p></p>
                             <p>Prix: {item.Prix[2]} Dh</p>
                         </div>
