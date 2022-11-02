@@ -28,6 +28,7 @@ function Login(){
             method:"POST", 
             body:JSON.stringify({
                
+                
                 "Gmail" : data.Gmail,
                 "Password" : data.Password
               }),
