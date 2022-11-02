@@ -38,6 +38,7 @@ if(sessionStorage.getItem("username")!==null){
                       <p>Reserver</p>
                     </div>
                     
+                    
                 </div>
                 <div className="Afichages">
                  {
