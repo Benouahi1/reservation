@@ -22,6 +22,7 @@ class App extends Component {
         <Route path="/Reserve" element={<Reserver />}></Route>
         <Route path="/Login" element={<Login />}></Route>
         <Route path="/Rougister" element={<Rougister />}></Route>
+        
       </Routes>
     </BrowserRouter>
     );
