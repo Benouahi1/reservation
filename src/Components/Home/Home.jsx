@@ -115,6 +115,7 @@ function Home(){
                                 </div>
                                 <div className="info1">
                                          
+                                         
                                 </div>
                             </div>
                             <div className="Card2 ">
