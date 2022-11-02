@@ -9,13 +9,18 @@ import { useForm } from 'react-hook-form';
 
 
 function Login(){
+    if(sessionStorage.getItem("username")===null){
+        
+    }else{
+        window.location.href = "/";
+    }
     const { register, handleSubmit, reset} = useForm();
     const onSubmit = (data) => {
         const newData = new FormData();
 
         newData.append("Gmail", data.Gmail);
         newData.append("Password", data.Password);
-    //    console.log(data); 
+    //  
       
         fetch('http://localhost:5000/User/Login', 
         {
@@ -33,11 +38,12 @@ function Login(){
         })
         .then(response => response.json())
         .then(data => sessionStorage.setItem("username" , data[0].UserName));
+       
+        window.location.reload();
         
-        
-        console.log( sessionStorage.getItem("username"))
+       
         reset();
-        // window.location.href = "/login";
+        
     }
  return(
         <div className="Login">

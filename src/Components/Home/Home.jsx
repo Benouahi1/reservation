@@ -12,6 +12,11 @@ import Banc3 from "../../images/debit-card-removebg-preview - Copy.png";
 
 
 function Home(){
+    if(sessionStorage.getItem("username")===null){
+        window.location.href = "/Login";
+    }else{
+       
+    }
     return(
             <div className="Home">
                 <div className="img">

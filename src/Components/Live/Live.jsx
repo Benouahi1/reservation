@@ -5,7 +5,13 @@ import './Live.css'
 
 function Live(){
 
-    if(sessionStorage.getItem("username")===''){
+    const Logout = (e) =>{
+        sessionStorage.clear();
+       console.log(sessionStorage.getItem('username'))
+       window.location.reload();
+    }
+
+    if(sessionStorage.getItem("username")=== null){
         
         return(
             <div
@@ -97,11 +103,16 @@ function Live(){
               
                 </ul>
                
-                <a href="/Logout" 
-                className="Boton"
-            
-            > 
-                Logout</a>
+               <button style={{
+                width:'10%',
+                height: '50px',
+                marginTop: '2px'
+               }} className="Button" 
+               onClick={Logout}
+               > 
+               Logout
+               </button>
+              
                  
             </div>
                 );

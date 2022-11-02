@@ -5,9 +5,7 @@ import {useState, useEffect } from "react";
 
 
 function Chercher(){
-    if(sessionStorage.getItem("username")===''){
-       
-    }else{
+    if(sessionStorage.getItem("username")===null){
         window.location.href = "/login";
     }
     const [Data ,setData]= useState();

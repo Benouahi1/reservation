@@ -18,7 +18,7 @@ root.render(
   <div>
 
     <Live />
-   <App />
+    <App />
     <Footer />
 
 
