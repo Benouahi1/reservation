@@ -2,7 +2,7 @@ import {Component} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Reserver from './Components/Reservation/Resevation';
-import Login from './Components/Login/Login';
+import Login from './Components/Login-User/Login';
 import Rougister from './Components/Rougister/Rougister';
 import Dashbord from './Components/Dashbord/dashbord';
 import Chercher from './Components/Chercher/Chercher';
@@ -22,7 +22,7 @@ class App extends Component {
         <Route path="/Reserve" element={<Reserver />}></Route>
         <Route path="/Login" element={<Login />}></Route>
         <Route path="/Rougister" element={<Rougister />}></Route>
-        
+
       </Routes>
     </BrowserRouter>
     );
