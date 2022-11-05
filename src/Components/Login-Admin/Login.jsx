@@ -22,7 +22,7 @@ function Login(){
         newData.append("Password", data.Password);
     //  
       
-        fetch('http://localhost:5000/User/Login', 
+        fetch('http://localhost:5000/Admin/Login', 
         {
 
             method:"POST", 
@@ -38,7 +38,7 @@ function Login(){
             }
         })
         .then(response => response.json())
-        .then(data => sessionStorage.setItem("username" , data[0].UserName));
+        .then(data => sessionStorage.setItem("username" , "Admin"));
        
         window.location.reload();
         
