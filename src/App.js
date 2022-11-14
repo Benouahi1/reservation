@@ -8,8 +8,10 @@ import Dashbord from './Components/Dashbord/dashbord';
 import Chercher from './Components/Chercher/Chercher';
 import Admin from './Components/Admin/Admin';
 import ListTicket from './Components/ListTicket/ListTicket';
-
+import ListCar from './Components/ListCar/ListCar';
+import AjouterCar from './Components/AjouterCar/AjouterCar';
 import './App.css';
+
 
 
 class App extends Component {
@@ -17,6 +19,8 @@ class App extends Component {
     return (
       <BrowserRouter>
       <Routes>
+        <Route path="/AjouterCar" element={<AjouterCar />} ></Route>
+        <Route path="/ListCar" element={<ListCar />}></Route>
       <Route path="/ListTicket" element={<ListTicket />}></Route>
        <Route path="/Admin" element={<Admin />}></Route>
         <Route path="/Chercher" element={<Chercher />}></Route>
