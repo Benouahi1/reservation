@@ -1,24 +1,29 @@
 import React from "react";
 
-import './Login.css';
-import img4 from '../../images/jonathan-borba-LnggkK8864c-unsplash.jpg'
+import './Admin.css';
+import img4 from '../../images/Facebook-Page-Admin.jpg'
 import { useForm } from 'react-hook-form';
 
 
 
 
 
-function Login(){
-    if(sessionStorage.getItem("username")===null){
+function Admin(){
+    if(sessionStorage.getItem("username")!=="admin"){
         
     }else{
-        window.location.href = "/";
+        if(sessionStorage.getItem("username")===null){
+            window.location.href = "/Dashbord";
+        }else{
+            window.location.href = "/";
+        }
+        
     }
     const { register, handleSubmit, reset} = useForm();
     const onSubmit = (data) => {
         const newData = new FormData();
 
-        newData.append("Gmail", data.Gmail);
+        newData.append("GmailAdmin", data.GmailAdmin);
         newData.append("Password", data.Password);
     //  
       
@@ -29,7 +34,7 @@ function Login(){
             body:JSON.stringify({
                
                 
-                "Gmail" : data.Gmail,
+                "GmailAdmin" : data.GmailAdmin,
                 "Password" : data.Password
               }),
             headers: {
@@ -38,7 +43,7 @@ function Login(){
             }
         })
         .then(response => response.json())
-        .then(data => sessionStorage.setItem("username" , "Admin"));
+        .then(data => sessionStorage.setItem("username" , "admin"));
        
         window.location.reload();
         
@@ -46,12 +51,13 @@ function Login(){
         reset();
         
     }
+
  return(
         <div className="Login">
             <img className="BackgroundImages" src={img4} alt="" />
             <form method="POST" onSubmit={handleSubmit(onSubmit)} >  
             <div className="Log">
-                <p className="p1">Login</p>
+                <p className="p1">Login Admin</p>
                     <p className="p">Gmail</p>
                     <input type="text"
                      name="Gmail"
@@ -61,7 +67,7 @@ function Login(){
                     <input  type="Password"
                     {...register("Password")}
                     required/>
-                    <a className="Cree" href="/Rougister">Cree un Compte</a>
+                  
                     <button type="submit" value="Add" className="Conect">Connecte</button>
             </div>
             </form>
@@ -73,4 +79,4 @@ function Login(){
 );
 }
 
-export default Login;
+export default Admin;

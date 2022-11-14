@@ -6,6 +6,11 @@ import {useState, useEffect } from "react";
 
 
 function Reserver(){
+    if(sessionStorage.getItem("username")!==null){
+
+    }else{
+        window.location.href = "/Login";
+    }
 
 const [Data ,setData]= useState();
 
@@ -28,7 +33,7 @@ const [Data ,setData]= useState();
         }, [])
     
     
-if(sessionStorage.getItem("username")!==null){
+
     if(typeof Data === "object"){
     return(
             <div>
@@ -44,6 +49,7 @@ if(sessionStorage.getItem("username")!==null){
                  {
                     Data.map((item, index) => (
                         <div className="Card1">
+                            
                             <img className="img2" src={Img2} alt="" />
                             <div className="info">
                                 <p>Apart:  {item.Circulation[0]}</p>
@@ -75,9 +81,6 @@ if(sessionStorage.getItem("username")!==null){
 
 
 
-}else{
-    console.log("aaaaaaaaaaaaaa")
-}
 }
 
 export default Reserver;

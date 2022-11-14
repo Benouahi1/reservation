@@ -6,6 +6,8 @@ import Login from './Components/Login-User/Login';
 import Rougister from './Components/Rougister/Rougister';
 import Dashbord from './Components/Dashbord/dashbord';
 import Chercher from './Components/Chercher/Chercher';
+import Admin from './Components/Admin/Admin';
+import ListTicket from './Components/ListTicket/ListTicket';
 
 import './App.css';
 
@@ -15,10 +17,11 @@ class App extends Component {
     return (
       <BrowserRouter>
       <Routes>
-       
+      <Route path="/ListTicket" element={<ListTicket />}></Route>
+       <Route path="/Admin" element={<Admin />}></Route>
         <Route path="/Chercher" element={<Chercher />}></Route>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/Dashbord" element={<Dashbord />}></Route>
+        <Route path="/dashbord" element={<Dashbord />}></Route>
         <Route path="/Reserve" element={<Reserver />}></Route>
         <Route path="/Login" element={<Login />}></Route>
         <Route path="/Rougister" element={<Rougister />}></Route>

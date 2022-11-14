@@ -1,0 +1,105 @@
+import React from "react";
+import './List.css';
+import Reserve from "../../images/Reserve.jpg";
+import {useState, useEffect } from "react";
+
+
+
+
+
+
+
+
+
+
+
+
+function ListTicket(){
+    if(sessionStorage.getItem("username")!=="admin"){
+        window.location.href = "/Admin";
+    }
+
+    
+    const [Data ,setData]= useState();
+
+    useEffect(()=> {
+        fetch('http://localhost:5000/Reserve', 
+            {
+                method:"GET", 
+                headers: {
+                    'Access-Control-Allow-Origin':'*',
+                    'Content-type': 'application/json; charset=UTF-8'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                setData(data);
+    
+            });
+        }, [])
+    
+    
+
+    if(typeof Data === "object"){
+        
+    
+    
+
+ 
+    return(
+            <div>
+                  <div>
+                    <img className="imge1" src={Reserve} alt="" />
+                    <div  className="Reserve">
+                      <p>Dashbord</p>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div className="Afichages1">
+                
+
+                <div className="ListTable">
+                 
+                    <td>
+                        <th>User Name</th>
+                        <th>Numero Car</th>
+                        <th>ville Depare</th>
+                        <th>Date Depart</th>
+                        <th>hours Depart</th>
+                        <th>Num Place</th>
+                        <th>ville Collections</th>
+                        <th>Prix</th>
+                        <th>Action</th>
+                    </td>
+                    {
+                    Data.map((item, index) => (
+                        <td>
+                            <tr>{item.NomUtilisateur}</tr>
+                            <tr>{item.NumeroCar}</tr>
+                            <tr>{item.villeDepare}</tr>
+                            <tr>{item.DateDepart.toString().split("T")[0]}</tr>
+                            <tr>{item.hoursDepart}</tr>
+                            <tr>{item.NumeroPlace}</tr>
+                            <tr>{item.villeCollections}</tr>
+                            <tr>{item.Prix}</tr>
+                            <tr></tr>
+                            
+                        </td>
+                    ))
+                }
+                     
+                 
+                </div>
+                </div>
+            </div>
+        
+    );
+            
+    }
+    
+}
+
+export default ListTicket;

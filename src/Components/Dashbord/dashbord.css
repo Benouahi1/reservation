@@ -3,18 +3,25 @@
     width: 100%;
    display: flex;
    flex-direction: row;
+   padding-top: 2%;
+   padding-bottom: 2%;
+   justify-content: space-around;
     
 }
-.ul{
-    list-style: none;
-    width: 20%;
-   
-}
-.li{
-    padding: 7%;
+.listD{
     text-align: center;
-    color: white;
-    margin-left: -12%;
+    width: 10%;
+   
+    border: 1px solid;
+ 
+    border-radius: 8px;
+}
+.ListDashbord{
+    color: black;
     font-size: 20px;
-    background-color: #344fa1;
+    font-weight: 600;
+
+}
+.Img10{
+    width: 80%;
 }

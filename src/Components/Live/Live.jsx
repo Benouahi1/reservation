@@ -29,30 +29,10 @@ function Live(){
                 <h1>
                     Bus
                 </h1>
-            
-                <ul style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-evenly',
-                    alignItems: 'center',
-                    width: '30%',
-                    color: 'white',
-                   listStyle: 'none',
-                   marginTop: '10px', 
-                   textDecoration: 'none',
-                }}
-                >
-                <li 
-                style={{
-                    marginleft: '10px',
-                }}
-                > <a
-                style={{
-                   
-                }} href="/">Home</a></li>
-                <li><a href="/Reserve">Reserve</a></li>
-              
-                </ul>
+            <div>
+
+            </div>
+               
                
                 <a href="/Login" 
                 className="Boton"
@@ -63,59 +43,110 @@ function Live(){
             </div>
                 );
     }else{
-        return(
-            <div
-            className="NAv"
-            style={{
-                display: 'flex',
-                flexDirection: 'row',
-                color: '#ffffff',
-                backgroundColor:'#344fa1',
-                justifyContent: 'space-around',
-                
-            }}
-            > 
-                <h1>
-                    Bus
-                </h1>
-            
-                <ul style={{
+        if(sessionStorage.getItem("username")==="admin"){
+            return(
+                <div
+                className="NAv"
+                style={{
                     display: 'flex',
                     flexDirection: 'row',
-                    justifyContent: 'space-evenly',
-                    alignItems: 'center',
-                    width: '30%',
-                    color: 'white',
-                   listStyle: 'none',
-                   marginTop: '10px', 
-                   textDecoration: 'none',
+                    color: '#ffffff',
+                    backgroundColor:'#344fa1',
+                    justifyContent: 'space-around',
+                    
                 }}
-                >
-                <li 
-                style={{
-                    marginleft: '10px',
-                }}
-                > <a
-                style={{
+                > 
+                    <h1>
+                        Bus
+                    </h1>
+                
+                    <ul style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'space-evenly',
+                        alignItems: 'center',
+                        width: '30%',
+                        color: 'white',
+                       listStyle: 'none',
+                       marginTop: '10px', 
+                       textDecoration: 'none',
+                    }}
+                    >
+                    <li className="li">Dashbord</li>
+                    
+                  
+                    </ul>
                    
-                }} href="/">Home</a></li>
-                <li><a href="/Reserve">Reserve</a></li>
-              
-                </ul>
+                   <button style={{
+                    width:'10%',
+                    height: '50px',
+                    marginTop: '2px'
+                   }} className="Button" 
+                   onClick={Logout}
+                   > 
+                   Logout
+                   </button>
+                  
+                     
+                </div>
+                 );
+        }else{
+            return(
+                <div
+                className="NAv"
+                style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    color: '#ffffff',
+                    backgroundColor:'#344fa1',
+                    justifyContent: 'space-around',
+                    
+                }}
+                > 
+                    <h1>
+                        Bus
+                    </h1>
+                
+                    <ul style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'space-evenly',
+                        alignItems: 'center',
+                        width: '30%',
+                        color: 'white',
+                       listStyle: 'none',
+                       marginTop: '10px', 
+                       textDecoration: 'none',
+                    }}
+                    >
+                    <li 
+                    style={{
+                        marginleft: '10px',
+                    }}
+                    > <a
+                    style={{
+                       
+                    }} href="/">Home</a></li>
+                    <li><a href="/Reserve">Reserve</a></li>
+                  
+                    </ul>
+                   
+                   <button style={{
+                    width:'10%',
+                    height: '50px',
+                    marginTop: '2px'
+                   }} className="Button" 
+                   onClick={Logout}
+                   > 
+                   Logout
+                   </button>
+                  
+                     
+                </div>
+                 );
+        }
+        
                
-               <button style={{
-                width:'10%',
-                height: '50px',
-                marginTop: '2px'
-               }} className="Button" 
-               onClick={Logout}
-               > 
-               Logout
-               </button>
-              
-                 
-            </div>
-                );
     }
     
 }

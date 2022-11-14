@@ -30,7 +30,14 @@
     margin-top: 1%;
 
 }
-
+.li{
+    text-align: center;
+    color: white;
+    margin-left: 18%;
+    font-size: 20px;
+    background-color: #344fa1;
+    margin-top: 1%;
+}
 
 .Conect{
     width: 60%;
