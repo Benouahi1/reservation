@@ -61,9 +61,16 @@ if(typeof Data === "object"){
                 </div>
                 
                <div className="Back">
-                
-                <button type="button" class="btn btn-primary">Ajouter</button>
-                
+               <div style={{
+                    textAlign: 'end'
+                }}>
+                <a class="btn btn-primary" 
+                style={{
+                    width:'10%',
+                    marginLeft: '3%'
+                }} 
+                href="/AjouterCar">Ajouter</a>
+                </div>
                 <div className="Afichages1">
               
                          <table class="table">
@@ -83,7 +90,7 @@ if(typeof Data === "object"){
                             <td>{item.chefeur}</td>
                             <td>{item.Numero_Car}</td>
                             <td><img src={Icon1} alt="" />
-                            <img className="icon2" src={Icon2} alt="" />
+                            <a href="/AjouterCar/{item._id}"><img className="icon2" src={Icon2} alt="" /></a>
                             </td>
                             
                         </tr>

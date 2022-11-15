@@ -1,3 +1,4 @@
+
 import React from "react";
 import './Reserve.css';
 import Reserve from "../../images/Reserve.jpg";
@@ -40,33 +41,32 @@ const [Data ,setData]= useState();
                 <div>
                     <img className="imge1" src={Reserve} alt="" />
                     <div  className="Reserve">
-                      <p>Reserver</p>
+                      <p>Voyages</p>
                     </div>
                     
                     
                 </div>
-                <div className="Afichages">
+                <div class="row row-cols-1 bg-light  row-cols-md-3 g-4" 
+                style={{
+                 
+                    paddingTop: '1%',
+                    paddingBottom: '1%',
+                }}
+                >
                  {
                     Data.map((item, index) => (
-                        <div className="Card1">
-                            
-                            <img className="img2" src={Img2} alt="" />
-                            <div className="info">
-                                <p>Apart:  {item.Circulation[0]}</p>
-                                <p>Circulation:  {item.Circulation[1]}</p>
-                                <p>Avant:  {item.Circulation[2]}</p>
-                            </div>
-                            <div className="info">
-                                <p>Date: {item.Date_depart.toString().split("T")[0]}</p>
-                                <p></p>
-                                <p>Prix: {item.Prix[2]} Dh</p>
-                            </div>
-                            <div className="info">
-                                <p>Hours depart: {item.Hours_Circulation[1]}</p>
-                                <p>Hours Circulation: {item.Hours_Circulation[1]}</p>
-                                <button className="but">Reserver</button>
-                            </div>
-                    
+                        
+                         <div class="col">
+                        <div class="card h-100">
+                        <img src={Img2} class="card-img-top" alt="..."/>
+                        <div class="card-body">
+                            <h5 class="card-title">{item.Name_Car}</h5>
+                            <p class="card-text ">{item.VilleDepart} AU {item.VilleFin}</p>
+                            <p class="card-text">{item.HoursDepares} Au {item.HoursFin} </p>
+                            <p class="card-text">Date: {item.Date_depart.toString().split("T")[0]} </p>
+                            <a class="btn btn-primary" href="">Reserver</a>
+                        </div>
+                        </div>
                     </div>
                     ))
                 }

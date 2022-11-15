@@ -12,11 +12,7 @@ import Banc3 from "../../images/debit-card-removebg-preview - Copy.png";
 
 
 function Home(){
-    if(sessionStorage.getItem("username")===null){
-        window.location.href = "/Login";
-    }else{
-       
-    }
+   
     return(
             <div className="Home">
                 <div className="img">
@@ -24,15 +20,7 @@ function Home(){
                        
                     </img>
                     <div className="inscriotion">
-                        <p className="Paragraph">Début</p>
-                        <input className="InputRecherche" ></input>
-
-                        <p className="Fin">Voyages</p>
-                        <hr></hr>
-                        <p className="Paragraph2">Accéder</p>
-                        <input className="InputRecherche2" ></input>
-
-                        <button>Rechirche</button>
+                        <h3>HOME</h3>
                     </div>
                 </div>
                 <p className="Titre">Voyages</p>

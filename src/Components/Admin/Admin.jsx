@@ -3,6 +3,7 @@ import React from "react";
 import './Admin.css';
 import img4 from '../../images/Facebook-Page-Admin.jpg'
 import { useForm } from 'react-hook-form';
+import Login from "../Login-User/Login";
 
 
 
@@ -19,7 +20,7 @@ function Admin(){
         }
         
     }
-    const { register, handleSubmit, reset} = useForm();
+    const { Login, handleSubmit, reset} = useForm();
     const onSubmit = (data) => {
         const newData = new FormData();
 
@@ -55,17 +56,17 @@ function Admin(){
  return(
         <div className="Login">
             <img className="BackgroundImages" src={img4} alt="" />
-            <form method="POST" onSubmit={handleSubmit(onSubmit)} >  
+            <form method="POST" className="LOG" onSubmit={handleSubmit(onSubmit)} >  
             <div className="Log">
                 <p className="p1">Login Admin</p>
                     <p className="p">Gmail</p>
                     <input type="text"
                      name="Gmail"
-                     {...register("Gmail")}
+                     {...Login("Gmail")}
                      required />
                     <p className="p">Password</p>
                     <input  type="Password"
-                    {...register("Password")}
+                    {...Login("Password")}
                     required/>
                   
                     <button type="submit" value="Add" className="Conect">Connecte</button>

@@ -49,7 +49,7 @@ function Login(){
  return(
         <div className="Login">
             <img className="BackgroundImages" src={img4} alt="" />
-            <form method="POST" onSubmit={handleSubmit(onSubmit)} >  
+            <form method="POST" className="LOG" onSubmit={handleSubmit(onSubmit)} >  
             <div className="Log">
                 <p className="p1">Login</p>
                     <p className="p">Gmail</p>

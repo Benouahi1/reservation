@@ -1,7 +1,6 @@
 import React from "react";
-import './List.css';
+
 import Reserve from "../../images/Reserve.jpg";
-import Icon1 from "../../images/x-circle.svg";
 import {useState, useEffect } from "react";
 
 
@@ -15,7 +14,7 @@ import {useState, useEffect } from "react";
 
 
 
-function ListTicket(){
+function User(){
     if(sessionStorage.getItem("username")!=="admin"){
         window.location.href = "/Admin";
     }
@@ -24,7 +23,7 @@ function ListTicket(){
     const [Data ,setData]= useState();
 
     useEffect(()=> {
-        fetch('http://localhost:5000/Reserve', 
+        fetch('http://localhost:5000/User', 
             {
                 method:"GET", 
                 headers: {
@@ -67,33 +66,19 @@ function ListTicket(){
                          <table class="table">
                             <thead>
                                 <tr>
-                                <th scope="col">User Name</th>
-                                <th scope="col">Numero Car</th>
-                                <th scope="col">ville Depare</th>
-                                <th scope="col">Date Depart</th>
-                                <th scope="col">hours Depart</th>
-                                <th scope="col">Num Place</th>
-                                <th scope="col">ville Collections</th>
-                                <th scope="col">Prix</th>
-                                <th scope="col">Action</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Gmail</th>
+                                <th scope="col">Password</th>
                                 </tr>
                             </thead>
                             <tbody>
                      {
                     Data.map((item, index) => (
                         <tr>
-                            <td scope="row">{item.NomUtilisateur}</td>
-                            <td>{item.NumeroCar}</td>
-                            <td>{item.villeDepare}</td>
-                            <td>{item.DateDepart.toString().split("T")[0]}</td>
-                            <td>{item.hoursDepart}</td>
-                            <td>{item.NumeroPlace}</td>
-                            <td>{item.villeCollections}</td>
-                            <td>{item.Prix}</td>
-                            <td><img src={Icon1} alt="" />
-                            {/* <img className="icon2" src={Icon2} alt="" /> */}
-                            </td>
-                            
+                            <td scope="row">{item.UserName}</td>
+                            <td>{item.Gmail}</td>
+                            <td>{item.Password}</td>
+                         
                         </tr>
                     ))
                 }
@@ -109,4 +94,4 @@ function ListTicket(){
     
 }
 
-export default ListTicket;
+export default User;

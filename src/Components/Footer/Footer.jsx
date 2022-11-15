@@ -6,35 +6,16 @@ import React from 'react';
     return (
       
 
-<footer
-        style={{
-          backgroundColor: '#344fa1',
-          width: '100%',
-          height: '70px',
-          display: 'flex',
-          flexDirection: 'column',
-          textAlign: 'center',
-          alignItems: 'center',
-          style: 'none',
-          paddingTop: '15px',
-        }}
-        >
-         <p style={{
- 
-         }}>
-            <a style={{
-                color: '#ffffff',
-                textDecoration: 'inherit',
-            }}
-            href='https://www.Youcode.ma'
-            >
-                    Youcode.ma
-            </a>
-         </p>
-      
-    
+<footer class="bg-light text-center text-light text-lg-start">
+  
+  <div class="text-center text-light text-reset fw-bold p-3" style={{
+    backgroundColor: 'rgb(13 110 253)',
+  }}>
+    © 2020 Copyright:
+    <a class="text-reset fw-bold" href="">YouCode.ma</a>
+  </div>
 
-         </footer>
+</footer>
      
         
     );

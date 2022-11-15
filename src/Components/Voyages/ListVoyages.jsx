@@ -1,5 +1,4 @@
 import React from "react";
-import './List.css';
 import Reserve from "../../images/Reserve.jpg";
 import Icon1 from "../../images/x-circle.svg";
 import {useState, useEffect } from "react";
@@ -15,7 +14,7 @@ import {useState, useEffect } from "react";
 
 
 
-function ListTicket(){
+function ListVoyages(){
     if(sessionStorage.getItem("username")!=="admin"){
         window.location.href = "/Admin";
     }
@@ -24,7 +23,7 @@ function ListTicket(){
     const [Data ,setData]= useState();
 
     useEffect(()=> {
-        fetch('http://localhost:5000/Reserve', 
+        fetch('http://localhost:5000/Voyages', 
             {
                 method:"GET", 
                 headers: {
@@ -53,7 +52,7 @@ function ListTicket(){
                   <div>
                     <img className="imge1" src={Reserve} alt="" />
                     <div  className="Reserve">
-                      <p>User</p>
+                      <p>Voyages</p>
                     </div>
                     
                     
@@ -61,19 +60,29 @@ function ListTicket(){
                 
                
                 
-
-               
+                <div style={{
+                    backgroundColor: 'white',
+                }}
+                class="p-2"
+                    >
+                <div style={{
+                    textAlign: 'end'
+                }}>
+                <a class="btn btn-primary" href="/AjouterVoyages">Ajouter Voyages</a>
+                </div>
+             
                 <div className="Afichages1">
+                
                          <table class="table">
                             <thead>
                                 <tr>
-                                <th scope="col">User Name</th>
+                                <th scope="col">Name Car</th>
                                 <th scope="col">Numero Car</th>
-                                <th scope="col">ville Depare</th>
                                 <th scope="col">Date Depart</th>
+                                <th scope="col">ville Depare</th>
+                                <th scope="col">ville Fin</th>
                                 <th scope="col">hours Depart</th>
-                                <th scope="col">Num Place</th>
-                                <th scope="col">ville Collections</th>
+                                <th scope="col">hours Fin</th>
                                 <th scope="col">Prix</th>
                                 <th scope="col">Action</th>
                                 </tr>
@@ -82,13 +91,13 @@ function ListTicket(){
                      {
                     Data.map((item, index) => (
                         <tr>
-                            <td scope="row">{item.NomUtilisateur}</td>
-                            <td>{item.NumeroCar}</td>
-                            <td>{item.villeDepare}</td>
-                            <td>{item.DateDepart.toString().split("T")[0]}</td>
-                            <td>{item.hoursDepart}</td>
-                            <td>{item.NumeroPlace}</td>
-                            <td>{item.villeCollections}</td>
+                            <td scope="row">{item.Name_Car}</td>
+                            <td>{item.Numero_Car}</td>
+                            <td>{item.Date_depart.toString().split("T")[0]}</td>
+                            <td>{item.VilleDepart}</td>
+                            <td>{item.VilleFin}</td>
+                            <td>{item.HoursDepares}</td>
+                            <td>{item.HoursFin}</td>
                             <td>{item.Prix}</td>
                             <td><img src={Icon1} alt="" />
                             {/* <img className="icon2" src={Icon2} alt="" /> */}
@@ -101,6 +110,7 @@ function ListTicket(){
                             </tbody>
                             </table>
                     </div> 
+                    </div>
             </div>
         
     );
@@ -109,4 +119,4 @@ function ListTicket(){
     
 }
 
-export default ListTicket;
+export default ListVoyages;
