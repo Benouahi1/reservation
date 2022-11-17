@@ -4,6 +4,7 @@ import Reserve from "../../images/Reserve.jpg";
 import Icon1 from "../../images/x-circle.svg";
 import Icon2 from "../../images/archive.svg";
 import {useState, useEffect } from "react";
+// import axios from "axios";
 
 
 
@@ -23,6 +24,21 @@ function ListCar(){
 
     
     const [Data ,setData]= useState();
+    const deletecar = async (id)=>{
+        fetch('http://localhost:5000/Car/'+id,  
+        {
+            method:"DELETE", 
+            headers: {
+                'Access-Control-Allow-Origin':'*',
+                'Content-type': 'application/json; charset=UTF-8'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+
+        });
+    }
 
     useEffect(()=> {
         fetch('http://localhost:5000/Car', 
@@ -39,8 +55,17 @@ function ListCar(){
                 setData(data);
     
             });
-        }, [])
-    
+        }, 
+        
+        [])
+        
+        
+
+      
+
+        
+
+      
     
 
 if(typeof Data === "object"){
@@ -88,9 +113,10 @@ if(typeof Data === "object"){
                         <tr>
                             <td scope="row">{item.car}</td>
                             <td>{item.chefeur}</td>
-                            <td>{item.Numero_Car}</td>
-                            <td><img src={Icon1} alt="" />
-                            <a href="/AjouterCar/{item._id}"><img className="icon2" src={Icon2} alt="" /></a>
+                            <td>{item.Numero_Car} </td>
+                            <td>
+                            <a href="javascript:void(0)" onClick={()=>{deletecar(item._id)}}><img src={Icon1} alt="" /></a>
+                            
                             </td>
                             
                         </tr>

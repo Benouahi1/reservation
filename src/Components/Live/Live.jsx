@@ -65,7 +65,7 @@ function Live(){
                    </button>
                    <div class="offcanvas offcanvas-end text-bg-primary" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                    <div class="offcanvas-header">
-                   <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MOUSSAFIR</h5>
+                   <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">{sessionStorage.getItem("username")}</h5>
                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                </div>
                <div class="offcanvas-body ">
@@ -74,8 +74,18 @@ function Live(){
                        <a class="nav-link active" aria-current="page" href="/Dashbord">Dashbord</a>
                    </li>
                    <li class="nav-item">
-                       <a class="nav-link" href="/Reserve">Voyages</a>
+                       <a class="nav-link active" aria-current="page" href="/User">User</a>
                    </li>
+                   <li class="nav-item">
+                       <a class="nav-link active" aria-current="page" href="/ListTicket">Ticket</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link active" aria-current="page" href="/ListCar">Car</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link active" aria-current="page" href="/ListVoyages">Voyages</a>
+                   </li>
+
                    </ul>
                     <div class="mb-12">
                    <a href="/Login" class=" mb-12 bg-primary btn btn-success"
@@ -105,7 +115,7 @@ function Live(){
                 </button>
                 <div class="offcanvas offcanvas-end text-bg-primary" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MOUSSAFIR</h5>
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">{sessionStorage.getItem("username")}</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body ">

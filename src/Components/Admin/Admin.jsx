@@ -60,8 +60,7 @@ function Admin(){
             <div className="Log">
                 <p className="p1">Login Admin</p>
                     <p className="p">Gmail</p>
-                    <input type="text"
-                     name="Gmail"
+                    <input type="Gmail"
                      {...Login("Gmail")}
                      required />
                     <p className="p">Password</p>

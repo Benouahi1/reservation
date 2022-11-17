@@ -29,7 +29,7 @@ class App extends Component {
         <Route path="/ListCar" element={<ListCar />}></Route>
       <Route path="/ListTicket" element={<ListTicket />}></Route>
        <Route path="/Admin" element={<Admin />}></Route>
-        <Route path="/Chercher" element={<Chercher />}></Route>
+        <Route path="/Chercher/:_id" element={<Chercher />}></Route>
         <Route path="/" element={<Home />}></Route>
         <Route path="/dashbord" element={<Dashbord />}></Route>
         <Route path="/Reserve" element={<Reserver />}></Route>

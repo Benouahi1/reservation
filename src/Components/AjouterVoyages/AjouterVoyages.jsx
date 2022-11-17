@@ -1,5 +1,5 @@
 import React from "react";
-
+import moment from 'moment';
 import Reserve from "../../images/Reserve.jpg";
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
@@ -10,15 +10,24 @@ function AjouterVoyages() {
     window.location.href = "/Admin";
   }
 
+  const now = moment();
+  const today = now.format('YYYY-MM-DD');
+  
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-
+    console.log(data);
     fetch("http://localhost:5000/Voyages/Add", {
       method: "POST",
       body: JSON.stringify({
-        car: data.car,
-        chefeur: data.chefeur,
+        Name_Car: data.Name_Car,
         Numero_Car: data.Numero_Car,
+        Date_depart: data.Date_depart,
+        VilleDepart: data.VilleDepart,
+        VilleFin: data.VilleFin,
+        HoursDepares: data.HoursDepares,
+        HoursFin: data.HoursFin,
+        Prix: data.Prix
+
       }),
       headers: {
         "Access-Control-Allow-Origin": "*",
@@ -88,7 +97,7 @@ function AjouterVoyages() {
 //   }, []);
 console.log(Ville);
 
-  if (typeof Data === "object" && typeof Ville === "object") {
+  if (typeof Data === "object") {
     return (
       <div>
         <div>
@@ -108,7 +117,7 @@ console.log(Ville);
             <label for="inputEmail4" class="form-label">
               Name Car
             </label>
-            <select class="form-control" name="" id="">
+            <select name="Name_Car" {...register("Name_Car")} class="form-control" id="">
               <option selected>Name Car</option>
               {Data.map((item, index) => (
                 <option value={item.car}>{item.car}</option>
@@ -119,7 +128,28 @@ console.log(Ville);
             <label for="inputEmail4" class="form-label">
               Name Car
             </label>
-            <select class="form-control" name="" id="">
+            <select  class="form-control" name="Numero_Car" {...register("Numero_Car")}   id="">
+              <option selected>Numero Car</option>
+              {Data.map((item, index) => (
+                <option value={item.Numero_Car}>{item.Numero_Car}</option>
+              ))}
+            </select>
+          </div>
+          <div className="col-md-2"></div>
+          <div className="col-md-2"></div>
+          <div class="col-md-4">
+            <label for="inputEmail4" class="form-label">
+              Date
+            </label>
+            {/* <input name="Date_depart" {...register("Date_depart")} class="form-control" type="date" /> */}
+            <input class="form-control" name="Date_depart" {...register("Date_depart")}
+             type="date" id="date" min={today} placeholder="Departure Date"  />
+          </div>
+          <div class="col-md-4">
+            <label for="inputEmail4" class="form-label">
+            Ville Depart
+            </label>
+            <select name="VilleDepart" {...register("VilleDepart")} class="form-control"  id="">
               <option selected>Ville Depart</option>
               {
                 Ville.map((data) =>
@@ -132,15 +162,15 @@ console.log(Ville);
           <div className="col-md-2"></div>
           <div class="col-md-4">
             <label for="inputEmail4" class="form-label">
-              Date
+            Hours Depart
             </label>
-            <input class="form-control" type="date" />
+            <input name="HoursDepares" {...register("HoursDepares")} class="form-control" type="time" />
           </div>
           <div class="col-md-4">
-            <label for="inputEmail4" class="form-label">
-            Ville Fin
+             <label for="inputEmail4" class="form-label">
+              Ville Fin
             </label>
-            <select class="form-control" name="" id="">
+            <select class="form-control" name="VilleFin" {...register("VilleFin")}   id="">
               <option selected>Ville Fin</option>
               {
                 Ville.map((data) =>
@@ -148,28 +178,25 @@ console.log(Ville);
                 )
               }
             </select>
+            
           </div>
           <div className="col-md-2"></div>
           <div className="col-md-2"></div>
           <div class="col-md-4">
-            <label for="inputEmail4" class="form-label">
-              Date Depart
+          <label for="inputEmail4" class="form-label">
+              Hours Fin
             </label>
-            <input class="form-control" type="time" />
+            <input name="HoursFin" {...register("HoursFin")} class="form-control" type="time" />
+           
           </div>
           <div class="col-md-4">
-            <label for="inputEmail4" class="form-label">
-              Date Fin
-            </label>
-            <input class="form-control" type="time" />
-          </div>
-          <div className="col-md-2"></div>
-          <div className="col-md-2"></div>
-          <div class="col-md-4">
-            <label for="inputEmail4" class="form-label">
+          <label for="inputEmail4" class="form-label">
               Prix
             </label>
-            <input class="form-control" placeholder="100 dh" type="text" />
+            <input name="Prix" {...register("Prix")} class="form-control" placeholder="100 dh" type="text" />
+          
+         
+           
           </div>
           
           <div

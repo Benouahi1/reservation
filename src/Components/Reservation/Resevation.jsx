@@ -64,7 +64,7 @@ const [Data ,setData]= useState();
                             <p class="card-text ">{item.VilleDepart} AU {item.VilleFin}</p>
                             <p class="card-text">{item.HoursDepares} Au {item.HoursFin} </p>
                             <p class="card-text">Date: {item.Date_depart.toString().split("T")[0]} </p>
-                            <a class="btn btn-primary" href="">Reserver</a>
+                            <a class="btn btn-primary" href={`/Chercher/${item._id}`}>Reserver</a>
                         </div>
                         </div>
                     </div>
@@ -75,8 +75,6 @@ const [Data ,setData]= useState();
         
     );
     
-}else{
-
 }
 
 

@@ -59,6 +59,7 @@ function Login(){
                      required />
                     <p className="p">Password</p>
                     <input  type="Password"
+                    name="Password"
                     {...register("Password")}
                     required/>
                     <a className="Cree" href="/Rougister">Cree un Compte</a>

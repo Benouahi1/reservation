@@ -1,6 +1,7 @@
 import React from "react";
 import Reserve from "../../images/Reserve.jpg";
 import Icon1 from "../../images/x-circle.svg";
+import icon2 from "../../images/archive.svg";
 import {useState, useEffect } from "react";
 
 
@@ -21,6 +22,23 @@ function ListVoyages(){
 
     
     const [Data ,setData]= useState();
+
+
+    const deleteVoyages = async (id)=>{
+        fetch('http://localhost:5000/Voyages/'+id,  
+        {
+            method:"DELETE", 
+            headers: {
+                'Access-Control-Allow-Origin':'*',
+                'Content-type': 'application/json; charset=UTF-8'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+
+        });
+    }
 
     useEffect(()=> {
         fetch('http://localhost:5000/Voyages', 
@@ -95,12 +113,13 @@ function ListVoyages(){
                             <td>{item.Numero_Car}</td>
                             <td>{item.Date_depart.toString().split("T")[0]}</td>
                             <td>{item.VilleDepart}</td>
-                            <td>{item.VilleFin}</td>
-                            <td>{item.HoursDepares}</td>
-                            <td>{item.HoursFin}</td>
-                            <td>{item.Prix}</td>
-                            <td><img src={Icon1} alt="" />
-                            {/* <img className="icon2" src={Icon2} alt="" /> */}
+                            <td>{item.VilleFin} </td>
+                            <td>{item.HoursDepares} h</td>
+                            <td>{item.HoursFin} h</td>
+                            <td>{item.Prix} Dh</td>
+                            <td>
+                            <a href="" onClick={()=>{deleteVoyages(item._id)}}><img src={Icon1} alt="" /></a>
+                           
                             </td>
                             
                         </tr>

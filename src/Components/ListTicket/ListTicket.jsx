@@ -53,16 +53,11 @@ function ListTicket(){
                   <div>
                     <img className="imge1" src={Reserve} alt="" />
                     <div  className="Reserve">
-                      <p>User</p>
+                      <p>Ticket</p>
                     </div>
                     
                     
                 </div>
-                
-               
-                
-
-               
                 <div className="Afichages1">
                          <table class="table">
                             <thead>
